@@ -12,15 +12,18 @@ namespace ChuckNorris
 
             Console.WriteLine($"{randomJoke}");
         }
+
         private static int GenerateRandomIndex(string[] someArray)
         {
             Random rnd = new Random();
             int randomIndex = rnd.Next(0, someArray.Length);
+
             return randomIndex;
         }
+
         private static string GetRandomFromFile(string fileName)
         {
-            string filePath = $@"C:\Users\Rass\samples\{fileName}.txt";
+            string filePath = $@"C:\Users\...\samples\{fileName}.txt";
             string[] dataFromFile = File.ReadAllLines(filePath);
             string randomElement = dataFromFile[GenerateRandomIndex(dataFromFile)];
 
